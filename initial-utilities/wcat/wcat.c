@@ -42,5 +42,7 @@ int cat_file(char *filename)
 		printf("%s", buffer);
 	}
 
+	fclose(fp);
+
 	return 0;
 }
