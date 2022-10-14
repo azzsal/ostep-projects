@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int search_file(char *searchterm, FILE *fp);
+void search_file(char *searchterm, FILE *fp);
 
 int main(int argc, char *argv[])
 {
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
 }
 
-int search_file(char *searchterm, FILE *fp)
+void search_file(char *searchterm, FILE *fp)
 {
 	char *lineptr = NULL;
 	size_t len = 0;
@@ -47,6 +47,4 @@ int search_file(char *searchterm, FILE *fp)
 
 	free(lineptr);
 	fclose(fp);
-
-	return 0;
 }
